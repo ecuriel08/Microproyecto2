@@ -1,0 +1,8 @@
+<div class="row justify-content-center mt-4" *ngIf="personaje$ | async as personaje">
+    <div class="col-xs-12 col-sm-6 col-md-6 justify-content-center" > 
+        <app-personaje [personaje]="personaje" ></app-personaje>
+    </div>
+  </div>
+  <button (click)="goBack()" class="btn btn-secondary justify-content-center">
+      Atras
+  </button>

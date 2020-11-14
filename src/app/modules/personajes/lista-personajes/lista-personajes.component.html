@@ -1,0 +1,11 @@
+<div class="row" infinite-scroll (scrolled) = "onScrollDown">
+    <div class="col-xs-12 col-sm-6 col-md-4" *ngFor ="let personaje of personajes"> 
+        <app-personaje [personaje]="personaje"></app-personaje>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 mt-5 container-notFound" *ngIf= "personajes.length < 0">
+      <p>AYUDA NO SE VEN </p>
+    </div>
+  </div>
+  <button [ngClass] = "'no-hidden'" *ngIf = "showGoUpButton" class="btn btn-secondary" (click)= 'onScrollTop()'>
+      Subir
+  </button>
